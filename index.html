@@ -1,320 +1,374 @@
 <!DOCTYPE html>
 <html>
 
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="CelebV-HQ: A Large-scale Video Facial Attributes Dataset ">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CelebV-HQ: A Large-scale Video Facial Attributes Dataset </title>
 
-    <title>CelebV-HQ: A Large-scale Video Facial Attributes Dataset</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
-    <link rel="stylesheet" href="css/app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+  <style>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
-    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
-
-    <script src="js/app.js"></script>
-    <!-- <style>
-     
-    </style> -->
+    #pic_list
+    {
+    display:block;
+    white-space:nowrap;
+    /* width:500px; */
+    overflow:auto;
+    }
+    #pic_list li
+    {
+    /* width:200px;
+    height:120px;
+     */
+     margin:30px;
+    display:inline-block;
+    }
+    </style>
 </head>
 
 <body>
-    <div class="container" id="main">
-        <div class="row">
-            <h2 class="col-md-12 text-center">
-                <b>CelebV-HQ</b>: A Large-scale Video Facial Attributes Dataset
-                </br>
-                <small>
+  <!-- <div id="loading">
+  <div class="loader"></div>
+</div>
+ -->
 
-                </small>
-            </h2>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <ul class="list-inline">
-                    <li>
-                        <a href="https://www.zhuhaozh.xyz/">
-                            Hao Zhu
-                        </a> <sup>1</sup>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Wentao Zhu
-                        </a><sup>2</sup>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Liming Jiang
-                        </a><sup>3</sup>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Siwei Tang
-                        </a><sup>1</sup>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Li Zhang
-                        </a><sup>1</sup>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Ziwei Liu
-                        </a><sup>3</sup>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Chen Change Loy
-                        </a><sup>3</sup>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Wayne Wu
-                        </a><sup>1,4</sup>
-                    </li>
-                </ul>
-                <ul class="list-inline">
-                    <li><sup>1</sup><a> SenseTime Research</a></li>
-                    <li><sup>2</sup><a> Peking University</a></li>
-                    <li><sup>3</sup><a> S-Lab, Nanyang Technological University</a></li>
-                    <li><sup>4</sup><a> Shanghai AI Laboratory</a></li>
-                </ul>
+
+  <!-- <script> magnify("myimage", 3); </script> -->
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">CelebV-HQ: A Large-scale Video Facial Attributes Dataset</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <h3 style="color:#5a6268;">Preprint 2022</h3>
+                <!-- <a href="https://xxxx.com">xx xxx</a><sup>1</sup>,</span> -->
+
+                <span class="author-block">
+                  <a href="https://xxx.com">Hao Zhu</a><sup>1</sup>, </span>
+                <span class="author-block">
+                  <a href="https://xxx.com">Wentao Zhu</a><sup>2</sup>, </span>
+                <span class="author-block">
+                  <a href="https://xxx.com">Liming Jiang</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://xxx.com">Siwei Tang</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://xxx.com">Li Zhang</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://xxx.com">Ziwei Liu</a><sup>3</sup>
+                </span>
+                <span class="author-block">
+                  <a href="https://xxx.com">Chen Change Loy</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://xxx.com">Wayne Wu</a><sup>1,4</sup>,
+                </span>
             </div>
-        </div>
 
-
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <ul class="nav nav-pills nav-justified">
-                    <li>
-                        <a href="#">
-                            <image src="img/paper_image.png" height="60px">
-                                <h4><strong>Paper</strong></h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://youtu.be/EpH175PY1A0">
-                            <image src="img/youtube_icon.png" height="60px">
-                                <h4><strong>Video</strong></h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/zhuhaozh/CelebV_HQ">
-                            <image src="img/github_pad.png" height="60px">
-                                <h4><strong>Github</strong></h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="explore/index.html">
-                            <image src="img/explore.png" height="60px">
-                                <h4><strong>Explore</strong><sup><small>try</small></sup></h4>
-                        </a>
-                    </li>
-                </ul>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>SenseTime Research, </span>
+              <span class="author-block"><sup>2</sup>Peking University University, </span>
+              <span class="author-block"><sup>2</sup>S-Lab, Nanyang Technological University, </span>
+              <span class="author-block"><sup>4</sup>Shanghai AI Laboratory </span>
             </div>
-        </div>
 
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-
-                <div class="figure">
-                    <img class="Sirv image-main" src="img/teaser.png" data-src="img/teaser.png">
-                    <img class="Sirv image-hover" data-src="img/teaser_hover3.png">
-                </div>
-                <!-- <div class="card">
-                    <image src="img/teaser.png" class="img-responsive" alt="overview">
-                    <image src="img/teaser_hover.png" class="img-responsive img-top" alt="overview">
-                </div> -->
-                <br>
-                <h3>
-                    Abstract
-                </h3>
-                <p> Large-scale datasets played an indispensable role in the recent success of face
-                    generation/editing and significantly facilitate the advances of emerging research fields.
-                    However, the academic community still lacks a video dataset with diverse facial attribute
-                    annotations, which is crucial for face-related video research.</p>
-                <p class="text-justify">
-
-                    We propose a large-scale, high-quality, and diverse video dataset, <b>named the
-                        High-Quality Celebrity Video Dataset (CelebV-HQ)</b>, with rich facial attribute
-                    annotations.
-                    CelebV-HQ contains 35,666 video clips involving 15,653 identities and 83 manually labeled facial
-                    attributes covering appearance, action, and emotion.
-                </p>
-                <p>
-                    We conduct a comprehensive analysis in terms of ethnicity, age, brightness, motion smoothness,
-                    head pose diversity, and data quality to demonstrate the diversity and temporal coherence of
-                    CelebV-HQ. Besides, its versatility and potential are validated on unconditional video
-                    generation and video facial attribute editing tasks.
-                    <!-- Furthermore, we envision the future potential of CelebV-HQ, as well as the new opportunities and
-                        challenges it would bring to related research directions. -->
-                </p>
-                <p>For more details of the dataset, please refer to the paper "<a href="#">CelebV-HQ: A Large-scale
-                        Video Facial Attributes Dataset</a>".
-                </p>
-                <!-- </p> -->
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>Overview
-                </h3>
-                <image src="img/demo.gif" width="100%" class="img-responsive" alt="overview">
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>Statistics
-                </h3>
-                <p class="text-justify">
-                    The distributions of each attribute. CelebV-HQ has a diverse distribution on each attribute
-                    category.
-                    Overall, CelebV-HQ contains diverse facial attributes and natural distributions, bringing new
-                    opportunities and challenges to the community.
-                </p>
-
-                <p style="text-align:center;">
-                    <image src="img/statistic.png" class="img-responsive" alt="scales">
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>Face Datasets Comparison</h3>
-                <p>CelebV-HQ consists of <b>35,666 video clips</b> of 3 to 20 seconds each, involving <b>15,653
-                        identities</b>, with a total video duration of about <b>65 hours</b>.
-                    CelebV-HQ also contains <b>83 annotations</b>, including 40 appearance attributes, 35 action
-                    attributes, and 8 emotion attributes.</p>
-                <image src="img/data_comp.png" width="100%" class="img-responsive" alt="overview">
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <!-- "https://arxiv.org/pdf/xxxx.xxxxx" -->
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1WsopipyFG5Kuilwo0pbOmzhZfxs0dx-C/view?usp=sharing"
+                    target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Supplement</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/sgep-p5AuIw" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/CelebV-HQ" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="explore/index.html" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
 
             </div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Agreement
-                </h3>
-                <ul>
-                    <li>The CelebV-HQ dataset is available for non-commercial research purposes only. </li>
-                    <li>All videos of the CelebV-HQ dataset are obtained from the Internet which are not property of
-                        SenseTime Research. The SenseTime Research is not responsible for the content nor the meaning
-                        of these videos. </li>
-                    <li>You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any
-                        commercial purposes, any portion of the videos and any portion of derived data.</li>
-                    <li>You agree not to further copy, publish or distribute any portion of the CelebV-HQ
-                        dataset. Except, for internal use at a single site within the same organization it is allowed to
-                        make copies of the dataset.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Download
-                </h3>
-                <p class="text-justify">We provide a <a href="https://www.github.com/zhuhaozh/">download tool</a> that
-                    automatically fetches and
-                    processes videos from <a href="https://www.youtube.com">YouTube</a>. We highly recommend using this
-                    tool to
-                    acquire the dataset. In addition, as some links may no longer be available, we host the full version
-                    of CelebV-HQ.
-                    Please contact us if needed.</p>
-                <!-- <div > -->
-
-                <!-- <a href="https://www.github.com/zhuhaozh/">
-                    <img class="download-main" src="img/database_icon.jpeg" height="120px" width="140px" alt="download">
-                    <h4 class="center text-center text-justify">Download Tools</h4>
-                </a>
-                <a href="https://www.github.com/zhuhaozh/">
-                    <img class="download-main" src="img/database_icon.jpeg" height="120px" width="140px" alt="download">
-                    <h4 class="center text-center text-justify">Download Tools</h4>
-                </a> -->
-                <!-- <a href="#">
-                        <image src="img/paper_image.png" height="60px">
-                            <h4><strong>Paper</strong></h4>
-                    </a> -->
-                <!-- </div> -->
-
-                <ul class="nav nav-pills nav-justified">
-                    <li>
-                        <a href="https://www.github.com/zhuhaozh/">
-                            <img src="img/database_icon.jpeg" height="120px" width="140px"
-                                alt="download">
-                            <p><strong>Download Tools</strong></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.github.com/zhuhaozh/">
-                            <img src="img/download_icon.jpeg" height="120px"  alt="download">
-                            <p><strong>Brightness Splits</strong></p>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Citation
-                </h3>
-                <p>If you find our work helpful, please cite our work: </p>
-                <div class="form-group col-md-10 col-md-offset-1">
-                    <textarea id="bibtex" class="form-control" readonly>@article{celebvhq,
-title={CelebV-HQ: A Large-scale Video Facial Attributes Dataset},
-author={Zhu, Hao and Zhu, Wentao and Jiang, Liming and Tang, Siwei and Zhang, Li and Liu, Ziwei and Loy, Chen Change and Wu, Wayne},
-journal={arxiv}}</textarea>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Acknowledgements
-                </h3>
-                <p class="text-justify">
-                    <!-- This work is supported by <b>TBD</b>. -->
-                    We sincerely thank <a href="#">Zongcai Sun</a> for his great help in source data preparation and
-                    download tool development.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Related Datasets
-                </h3>
-                <p class="text-justify">
-                    TBD
-                </p>
-            </div>
-        </div>
+      </div>
     </div>
+  </section>
+
+  <br><br>
+  <!-- Teaser Picture -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <img class="thumbnail" src="static/images/demo_V5_thumbnails-min_nobg.png" style="width:120%; margin-bottom:20px"> -->
+        <!-- <div class="img-magnifier-container">
+        <img id="magnifyimg" src="static/images/demo_V5_thumbnails-min_nobg.png" style="width:100%; margin-bottom:20px">
+      </div> -->
+        <div class="figure">
+          <img class="Sirv image-main" src="img/teaser.png" data-src="img/teaser.png">
+          <img class="Sirv image-hover" data-src="img/teaser_hover3.png">
+        </div>
+
+        <!-- <a href="" target="_blank">
+        <img src="img/teaser.png" style="width:100%; margin-bottom:20px">
+      </a> -->
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p> Large-scale datasets played an indispensable role in the recent success of face
+              generation/editing and significantly facilitate the advances of emerging research fields.
+              However, the academic community still lacks a video dataset with diverse facial attribute
+              annotations, which is crucial for face-related video research.
+              We propose a large-scale, high-quality, and diverse video dataset, <b>named the
+                High-Quality Celebrity Video Dataset (CelebV-HQ)</b>, with rich facial attribute
+              annotations.
+              CelebV-HQ contains 35,666 video clips involving 15,653 identities and 83 manually labeled facial
+              attributes covering appearance, action, and emotion.
+              We conduct a comprehensive analysis in terms of ethnicity, age, brightness, motion smoothness,
+              head pose diversity, and data quality to demonstrate the diversity and temporal coherence of
+              CelebV-HQ. Besides, its versatility and potential are validated on unconditional video
+              generation and video facial attribute editing tasks.
+              <!-- Furthermore, we envision the future potential of CelebV-HQ, as well as the new opportunities and
+                challenges it would bring to related research directions. -->
+            </p>
+            <p>For more details of the dataset, please refer to the paper "<a href="#">CelebV-HQ: A Large-scale
+                Video Facial Attributes Dataset</a>".
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--/ Abstract. -->
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 "> Overview</h2>
+          <image src="img/demo.gif" width="100%" class="img-responsive" alt="overview">
+
+
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3 "> Statistics</h2>
+        <div class="content has-text-justified">
+          <p>
+            The distributions of each attribute. CelebV-HQ has a diverse distribution on each attribute category.
+            Overall, CelebV-HQ contains diverse facial attributes and natural distributions, bringing new opportu
+            -unities and challenges to the community.
+          </p>
+          <image src="img/statistic.png" class="img-responsive" alt="scales">
+
+  </section>
+
+
+  <!-- Paper video. -->
+  <section>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <h2 class="title is-3">Overview Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/sgep-p5AuIw"
+                  frameborder="0" allow="autoplay; encrypted-media" width="50%"></iframe> 
+           <iframe src="https://youtu.be/sgep-p5AuIw"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- / Paper video.   -->
+
+    
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3 "> Face Datasets Comparison</h2>
+        <div class="content has-text-justified">
+          <p>CelebV-HQ consists of <b>35,666 video clips</b> of 3 to 20 seconds each, involving <b>15,653
+              identities</b>, with a total video duration of about <b>65 hours</b>.
+            CelebV-HQ also contains <b>83 annotations</b>, including 40 appearance attributes, 35 action
+            attributes, and 8 emotion attributes.</p>
+          <image src="img/data_comp.png" class="img-responsive" alt="overview">
+
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 "> Agreement</h2>
+          <div class="content has-text-justified">
+
+            <ul>
+              <li>The CelebV-HQ dataset is available for non-commercial research purposes only. </li>
+              <li>All videos of the CelebV-HQ dataset are obtained from the Internet which are not property of
+                SenseTime Research. The SenseTime Research is not responsible for the content nor the meaning
+                of these videos. </li>
+              <li>You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any
+                commercial purposes, any portion of the videos and any portion of derived data.</li>
+              <li>You agree not to further copy, publish or distribute any portion of the CelebV-HQ
+                dataset. Except, for internal use at a single site within the same organization it is allowed to
+                make copies of the dataset.</li>
+            </ul>
+
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 "> Download</h2>
+          <div class="content has-text-justified">
+            <p class="text-justify">We provide a <a href="https://www.github.com/zhuhaozh/">download tool</a> that
+              automatically fetches and
+              processes videos from <a href="https://www.youtube.com">YouTube</a>. We highly recommend using this
+              tool to
+              acquire the dataset. In addition, as some links may no longer be available, we host the full version
+              of CelebV-HQ.
+              Please contact us if needed.</p>
+
+              <ul id="pic_list">
+                <li>
+                  <a href="https://www.github.com/zhuhaozh/">
+                    <img src="img/database_icon.jpeg" height="120px" width="140px" alt="download">
+                    <p><strong>Download Tools</strong></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.github.com/zhuhaozh/">
+                    <img src="img/download_icon.jpeg" height="120px"  width="140px" alt="download">
+                    <p><strong>Brightness Splits</strong></p>
+                  </a>
+                </li>
+        
+              </ul>
+  </section>
+
+      <!-- <div > -->
+
+      <!-- <a href="https://www.github.com/zhuhaozh/">
+          <img class="download-main" src="img/database_icon.jpeg" height="120px" width="140px" alt="download">
+          <h4 class="center text-center text-justify">Download Tools</h4>
+      </a>
+      <a href="https://www.github.com/zhuhaozh/">
+          <img class="download-main" src="img/database_icon.jpeg" height="120px" width="140px" alt="download">
+          <h4 class="center text-center text-justify">Download Tools</h4>
+      </a> -->
+      <!-- <a href="#">
+              <image src="img/paper_image.png" height="60px">
+                  <h4><strong>Paper</strong></h4>
+          </a> -->
+      <!-- </div> -->
+<!-- 
+
+    </div>
+  </div> -->
+
+
+  <section class="section" id="Citaton">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{celebvhq,
+      title={CelebV-HQ: A Large-scale Video Facial Attributes Dataset},
+      author={Zhu, Hao and Zhu, Wentao and Jiang, Liming and Tang, Siwei and 
+        Zhang, Li and Liu, Ziwei and Loy, Chen Change and Wu, Wayne},
+      journal={arxiv}
+    }</code></pre>
+    </div>
+  </section>
+
+
+
+
+  <footer class="footer">
+    <div class="columns is-centered">
+      <div class="content">
+        <p> Templates credits: <a
+            href="https://github.com/nerfies/nerfies.github.io"> nerfies's webpage</a>. </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    $(window).on('load', function () {
+      $('#loading').hide();
+    }) 
+  </script>
 </body>
 
 </html>
