@@ -24,33 +24,19 @@
   <script src="./static/js/index.js"></script>
   <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
   <style>
+    #pic_list {
+      display: block;
+      white-space: nowrap;
+      overflow: auto;
+    }
 
-    #pic_list
-    {
-    display:block;
-    white-space:nowrap;
-    /* width:500px; */
-    overflow:auto;
+    #pic_list li {
+      display: inline-block;
     }
-    #pic_list li
-    {
-    /* width:200px;
-    height:120px;
-     */
-     /* margin:30px; */
-    display:inline-block;
-    }
-    </style>
+  </style>
 </head>
 
 <body>
-  <!-- <div id="loading">
-  <div class="loader"></div>
-</div>
- -->
-
-
-  <!-- <script> magnify("myimage", 3); </script> -->
 
   <section class="hero">
     <div class="hero-body">
@@ -60,13 +46,13 @@
             <h1 class="title is-1 publication-title">CelebV-HQ: A Large-scale Video Facial Attributes Dataset</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <h3 style="color:#5a6268;">Preprint 2022</h3><br/>
+                <h3 style="color:#5a6268;">Preprint 2022</h3><br />
                 <span class="author-block">
                   <a href="https://www.zhuhaozh.xyz">Hao Zhu</a><sup>1</sup>, </span>
                 <span class="author-block">
-                  <a href="#">Wentao Zhu</a><sup>2</sup>, </span>
+                  <a href="https://wentao.live/">Wentao Zhu</a><sup>2</sup>, </span>
                 <span class="author-block">
-                  <a href="#">Liming Jiang</a><sup>3</sup>,
+                  <a href="https://liming-jiang.com/">Liming Jiang</a><sup>3</sup>,
                 </span>
                 <span class="author-block">
                   <a href="#">Siwei Tang</a><sup>1</sup>,
@@ -75,19 +61,20 @@
                   <a href="#">Li Zhang</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="#">Ziwei Liu</a><sup>3</sup>
+                  <a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>3</sup>
                 </span>
                 <span class="author-block">
-                  <a href="#">Chen Change Loy</a><sup>3</sup>,
+                  <a href="https://scholar.google.com/citations?user=559LF80AAAAJ&hl=en">Chen Change
+                    Loy</a><sup>3</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="#">Wayne Wu</a><sup>1,4</sup>,
+                  <a href="https://wywu.github.io/">Wayne Wu</a><sup>1,4</sup>
                 </span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>SenseTime Research, </span>
-              <span class="author-block"><sup>2</sup>Peking University University, </span> <br/>
+              <span class="author-block"><sup>2</sup>Peking University University, </span> <br />
               <span class="author-block"><sup>3</sup>S-Lab, Nanyang Technological University, </span>
               <span class="author-block"><sup>4</sup>Shanghai AI Laboratory </span>
             </div>
@@ -153,11 +140,11 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div class="figure">
-          <img class="Sirv image-main" src="img/teaser.png" data-src="img/teaser.png">
-          <img class="Sirv image-hover" data-src="img/teaser_hover3.png">
+          <img class="Sirv image-main" src="static/img/teaser.png" data-src="static/img/teaser.png">
+          <img class="Sirv image-hover" data-src="static/img/teaser_hover3.png">
         </div>
 
-      </a> 
+        </a>
       </div>
     </div>
 
@@ -176,9 +163,10 @@
               However, the academic community still lacks a video dataset with diverse facial attribute
               annotations, which is crucial for face-related video research.
               We propose a large-scale, high-quality, and diverse video dataset, <b>named the
-              High-Quality Celebrity Video Dataset (CelebV-HQ)</b>, with rich facial attribute
+                High-Quality Celebrity Video Dataset (CelebV-HQ)</b>, with rich facial attribute
               annotations.
-            </p><p>
+            </p>
+            <p>
               CelebV-HQ contains 35,666 video clips involving 15,653 identities and 83 manually labeled facial
               attributes covering appearance, action, and emotion.
               We conduct a comprehensive analysis in terms of ethnicity, age, brightness, motion smoothness,
@@ -203,23 +191,25 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3 "> Overview</h2>
-          <image src="img/demo.gif" width="100%" class="img-responsive" alt="overview">
-
-
+          <div class="publication-video">
+            <video id="replay-video" controls muted preload autoplay loop width="100%">
+              <source src="./static/video/demo.mp4" type="video/mp4">
+            </video>
+          </div>
   </section>
 
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-        <h2 class="title is-3 "> Statistics</h2>
-        <div class="content has-text-justified">
-          <p>
-            The distributions of each attribute. CelebV-HQ has a diverse distribution on each attribute category.
-            Overall, CelebV-HQ contains diverse facial attributes and natural distributions, bringing new opportu
-            -unities and challenges to the community.
-          </p>
-          <image src="img/statistic.png" class="img-responsive" alt="scales">
+          <h2 class="title is-3 "> Statistics</h2>
+          <div class="content has-text-justified">
+            <p>
+              The distributions of each attribute. CelebV-HQ has a diverse distribution on each attribute category.
+              Overall, CelebV-HQ contains diverse facial attributes and natural distributions, bringing new opportu
+              -unities and challenges to the community.
+            </p>
+            <image src="static/img/statistic.png" class="img-responsive" alt="scales">
 
   </section>
 
@@ -239,80 +229,83 @@
     </div>
   </section> -->
 
-    <!-- / Paper video.   -->
-    <br/><br/>
-    <h3 class="title is-4 has-text-centered">Demo of Different Attribtues</h3>
-    <div class="content has-text-justified">
+  <!-- / Paper video.   -->
+  <br /><br />
+  <h3 class="title is-4 has-text-centered">Demo of Different Attribtues</h3>
+  <div class="content has-text-justified">
     <div class="slideshow-container">
 
-      
-      <div class="mySlides fade">
-        <div class="publication-video">
-          <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_eyegalsses.mp4" type="video/mp4"></video>
-                        <!-- <iframe src="https://www.youtube.com/embed/g3nmM6MdxwY?autoplay=1"
-            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
-        </div>
-          <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
-            <source src="./static/videos/10x1-style-mixing_5_9_clothingtype.mp4" type="video/mp4"></video>  -->
-        <!-- <div class="numbertext">2 / 3</div> -->
-        <br>
-        <div class="text">Appearance Attributes: Eyeglasses </div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="publication-video">
-          <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_laugh.mp4" type="video/mp4"></video>
 
-          <!-- <image src="img/demo.gif" width="100%" class="img-responsive" alt="overview"> -->
-            <!-- <iframe src="https://www.youtube.com/embed/p2uwqh_SFL8?autoplay=1"
+      <div class="mySlides fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_eyegalsses.mp4" type="video/mp4">
+          </video>
+          <!-- <iframe src="https://www.youtube.com/embed/g3nmM6MdxwY?autoplay=1"
             frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
         </div>
-          <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_5_9_clothingtype.mp4" type="video/mp4"></video>  -->
+        <br>
+        <div class="text">[1 / 3] Appearance Attributes: Eyeglasses </div>
+        <!-- <div class="numbertext">1 / 3</div> -->
+      </div>
+
+      <div class="mySlides fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_laugh.mp4" type="video/mp4">
+          </video>
+
+          <!-- <image src="static/img/demo.gif" width="100%" class="img-responsive" alt="overview"> -->
+          <!-- <iframe src="https://www.youtube.com/embed/p2uwqh_SFL8?autoplay=1"
+            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
+        </div>
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
             <source src="./static/videos/10x1-style-mixing_10_17_clothingcolor.mp4" type="video/mp4"></video> -->
         <!-- <div class="numbertext">3 / 3</div> -->
         <br>
-        <div class="text">Action Attributes: Laugh </div>
+        <div class="text">[2 / 3] Action Attributes: Laugh </div>
       </div>
 
       <div class="mySlides fade">
         <div class="publication-video">
-              <video id="replay-video" controls muted preload autoplay loop width="100%">
-                <source src="./static/video/test_sad.mp4" type="video/mp4"></video>
-              </div>
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_sad.mp4" type="video/mp4">
+          </video>
+        </div>
         <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
-            <source src="./static/videos/10x1-style-mixing_0_3_pose.mp4" type="video/mp4"></video> --> 
+            <source src="./static/videos/10x1-style-mixing_0_3_pose.mp4" type="video/mp4"></video> -->
         <!-- <div class="numbertext">1 / 3</div> -->
         <br>
-        <div class="text">Emotion Attributes: Sad </div>
+        <div class="text">[3 / 3] Emotion Attributes: Sad </div>
       </div>
       <a class="prev" onclick="plusSlides(-1)">❮</a>
       <a class="next" onclick="plusSlides(1)">❯</a>
-      </div>
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-      </div>
     </div>
-    <script> 
-      // https://stackoverflow.com/questions/47368940/css-slideshow-not-showing-image-until-clicked
-      let slideIndex=1;
-      showSlides(slideIndex);
-    </script>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+  <script>
+    // https://stackoverflow.com/questions/47368940/css-slideshow-not-showing-image-until-clicked
+    let slideIndex = 1;
+    showSlides(slideIndex);
+  </script>
 
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-        <h2 class="title is-3 "> Face Datasets Comparison</h2>
-        <div class="content has-text-justified">
-          <p>CelebV-HQ consists of <b>35,666 video clips</b> of 3 to 20 seconds each, involving <b>15,653
-              identities</b>, with a total video duration of about <b>65 hours</b>.
-            CelebV-HQ also contains <b>83 annotations</b>, including 40 appearance attributes, 35 action
-            attributes, and 8 emotion attributes.</p>
-          <image src="img/data_comp.png" class="img-responsive" alt="overview">
+          <h2 class="title is-3 "> Face Datasets Comparison</h2>
+          <div class="content has-text-justified">
+            <p>CelebV-HQ consists of <b>35,666 video clips</b> of 3 to 20 seconds each, involving <b>15,653
+                identities</b>, with a total video duration of about <b>65 hours</b>.
+              CelebV-HQ also contains <b>83 annotations</b>, including 40 appearance attributes, 35 action
+              attributes, and 8 emotion attributes.</p>
+            <image src="static/img/data_comp.png" class="img-responsive" alt="overview">
 
   </section>
 
@@ -355,24 +348,31 @@
               of CelebV-HQ.
               Please contact us if needed.</p>
 
-              <ul id="pic_list">
-                <li>
+            <ul id="pic_list">
+              <li>
+                <figure>
+                  <a href="#">
+                    <img src="static/img/download_icon.jpeg" height="120px" width="140px" alt="download">
+                    <figcaption> 1. Download Tool </figcaption>
+                  </a>
+                </figure>
+              </li>
+              <li>
+                <a href="#">
                   <figure>
-                  <a href="https://www.github.com/zhuhaozh/">
-                    <img src="img/download_icon.jpeg" height="120px" width="140px" alt="download">
-                    <figcaption> Download Tool </figcaption>
-                  </a>
-                  </figure>
-                </li>
-                <li>
-                  <a href="https://www.github.com/zhuhaozh/">
-                    <figure>
-                    <img src="img/download_icon.jpeg" height="120px"  width="140px" alt="download">
-                    <figcaption> Brightness Splits </figcaption>
-                  </a>
-                </li>
-        
-              </ul>
+                    <img src="static/img/download_icon.jpeg" height="120px" width="140px" alt="download">
+                    <figcaption> 2. Train/val Splits </figcaption>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="static/img/download_icon.jpeg" height="120px" width="140px" alt="download">
+                    <figcaption> 3. Brightness Splits </figcaption>
+                </a>
+              </li>
+
+            </ul>
   </section>
 
 
@@ -381,14 +381,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-        <h2 class="title is-3 "> Acknowledgements</h2>
-        <div class="content has-text-justified">
-          <p class="text-justify">
-            We sincerely thank <a href="#">Zongcai Sun</a> for his great help in source data preparation and
-            download tool development.</p>
+          <h2 class="title is-3 "> Acknowledgements</h2>
+          <div class="content has-text-justified">
+            <p class="text-justify">
+              We sincerely thank <a href="#">Zongcai Sun</a> for his great help in source data preparation and
+              the download tool development.</p>
 
   </section>
-  
+
   <section class="section" id="Citaton">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -406,8 +406,8 @@
   <footer class="footer">
     <div class="columns is-centered">
       <div class="content">
-        <p> This template is borrowed from <a
-            href="https://github.com/nerfies/nerfies.github.io"> nerfies's webpage</a>. </p>
+        <p> This template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io"> nerfies's
+            webpage</a>. </p>
       </div>
     </div>
   </footer>
