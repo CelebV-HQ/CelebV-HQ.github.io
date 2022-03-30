@@ -233,7 +233,7 @@
 
 
   <!-- Paper video. -->
-  <section>
+  <!-- <section>
     <div class="columns is-centered has-text-centered">
       <div class="column is-three-fifths">
         <h2 class="title is-3">Overview Video</h2>
@@ -245,10 +245,71 @@
         </div>
       </div>
     </div>
-  </section>
-    <!-- / Paper video.   -->
+  </section> -->
 
-    
+    <!-- / Paper video.   -->
+    <br/><br/>
+    <h3 class="title is-4 has-text-centered">Demo of Different Attribtues</h3>
+    <div class="content has-text-justified">
+    <div class="slideshow-container">
+
+      
+      <div class="mySlides fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_eyegalsses.mp4" type="video/mp4"></video>
+                        <!-- <iframe src="https://www.youtube.com/embed/g3nmM6MdxwY?autoplay=1"
+            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
+        </div>
+          <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_5_9_clothingtype.mp4" type="video/mp4"></video>  -->
+        <!-- <div class="numbertext">2 / 3</div> -->
+        <div class="text">Appearance Attributes: Eyeglasses </div>
+        <br>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_laugh.mp4" type="video/mp4"></video>
+
+          <!-- <image src="img/demo.gif" width="100%" class="img-responsive" alt="overview"> -->
+            <!-- <iframe src="https://www.youtube.com/embed/p2uwqh_SFL8?autoplay=1"
+            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
+        </div>
+          <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_10_17_clothingcolor.mp4" type="video/mp4"></video> -->
+        <!-- <div class="numbertext">3 / 3</div> -->
+        <br>
+        <div class="text">Action Attributes: Laugh </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="publication-video">
+              <video id="replay-video" controls muted preload autoplay loop width="100%">
+                <source src="./static/video/test_sad.mp4" type="video/mp4"></video>
+              </div>
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_0_3_pose.mp4" type="video/mp4"></video> --> 
+        <!-- <div class="numbertext">1 / 3</div> -->
+        <br>
+        <div class="text">Emotion Attributes: Sad </div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+    </div>
+    <script> 
+      // https://stackoverflow.com/questions/47368940/css-slideshow-not-showing-image-until-clicked
+      let slideIndex=1;
+      showSlides(slideIndex);
+    </script>
+
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
