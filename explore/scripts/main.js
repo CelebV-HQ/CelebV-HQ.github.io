@@ -42,10 +42,12 @@ function filterItemsAjax(filter) {
   // alert(filter.toLowerCase())
   image_list = loadFile('data/lists/' + filter.toLowerCase() + '.txt');
   $('.pp-gallery .card-columns').html("");
+  // https://www.youtube.com/embed/BspouwCTXRo?start=76&end=120
 
   for (var i = 0; i < image_list.length; i++) {
-    image_path = image_list[i]
-    img_block = "<div class='card' data-groups='[&quot;computer&quot;]'><a href='https://www.youtube.com/watch?v="+image_path+"'> <figure class='pp-effect'><img class='img-fluid' src='https://img.youtube.com/vi/" + image_path + "/mqdefault.jpg'/> <figcaption> <div class='h4'>Laptop</div> <p>Computer</p> </figcaption> </figure></a></div>"
+    params = image_list[i].split(",")
+    // img_block = "<div class='card' data-groups='[&quot;computer&quot;]'><a href='https://www.youtube.com/embed/"+params[0]+"+?start="+params[1]+"&end="+params[2]+"'> <figure class='pp-effect'><img class='img-fluid' src='https://img.youtube.com/vi/" + params[0] + "/mqdefault.jpg'/> <figcaption> <div class='h4'>Laptop</div> <p>Computer</p> </figcaption> </figure></a></div>"
+    img_block = "<div class='card' data-groups='[&quot;computer&quot;]'><a href='https://youtu.be/"+params[0]+"+?t="+params[1]+"'> <figure class='pp-effect'><img class='img-fluid' src='https://img.youtube.com/vi/" + params[0] + "/mqdefault.jpg'/> <figcaption> <div class='h4'>Laptop</div> <p>Computer</p> </figcaption> </figure></a></div>"
     $('.pp-gallery .card-columns').append(img_block)
     // alert(image_list)
     // alert()
