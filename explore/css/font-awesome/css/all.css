@@ -1056,6 +1056,17 @@ readers do not read off random characters that represent icons */
 .fa-comment-dollar:before {
   content: "\f651"; }
 
+
+.fa-dot2-circle:before {
+  content: "\f192"; }
+
+.fa-comment-dots2:before {
+  content: "\f4ad"; }
+
+    
+.fa-dot-circle:before {
+  content: "\f192"; }
+
 .fa-comment-dots:before {
   content: "\f4ad"; }
 
@@ -1343,9 +1354,6 @@ readers do not read off random characters that represent icons */
 
 .fa-door-open:before {
   content: "\f52b"; }
-
-.fa-dot-circle:before {
-  content: "\f192"; }
 
 .fa-dove:before {
   content: "\f4ba"; }

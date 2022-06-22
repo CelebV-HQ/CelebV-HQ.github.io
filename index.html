@@ -50,7 +50,7 @@
                 <span class="author-block">
                   <a href="https://www.zhuhaozh.xyz">Hao Zhu</a><sup>1*</sup>, </span>
                 <span class="author-block">
-                  <a href="https://wywu.github.io/">Wayne Wu</a><sup>1*  &#8224 </sup>
+                  <a href="https://scholar.google.com.tw/citations?user=uWfZKz4AAAAJ&hl=vi">Wayne Wu</a><sup>1*  &#8224 </sup>
                 </span>
                 <span class="author-block">
                   <a href="https://wentao.live/">Wentao Zhu</a><sup>2</sup>, </span>
@@ -58,10 +58,10 @@
                   <a href="https://liming-jiang.com/">Liming Jiang</a><sup>3</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="#">Siwei Tang</a><sup>1</sup>,
+                  <a href="mailto:tangsiwei@sensetime.com">Siwei Tang</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="#">Li Zhang</a><sup>1</sup>,
+                  <a href="mailto:lizhang2@sensetime.com">Li Zhang</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
                   <a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>3</sup>, 
@@ -69,7 +69,7 @@
                 <span class="author-block">
                   <a href="https://scholar.google.com/citations?user=559LF80AAAAJ&hl=en">Chen Change
                     Loy</a><sup>3</sup>
-                </span> (*Equal contribution)
+                </span> <small>(*Equal contribution)</small>
 
             </div>
 
@@ -87,7 +87,7 @@
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Paper</span>
+                    <span>Paper <small>(Coming soon)</small></span>
                   </a>
                 </span>
                 <!-- <span class="link-block">
@@ -101,16 +101,16 @@
                 </span> -->
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://youtu.be/8eNUwi34Xp8" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
-                    <span>Video</span>
+                    <span>Demo Video</span>
                   </a>
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/CelebV-HQ/" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/CelebV-HQ/CelebV-HQ" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -123,7 +123,7 @@
                     <span class="icon">
                       <i class="far fa-images"></i>
                     </span>
-                    <span>Explore</span>
+                    <span>Data Explore</span>
                   </a>
               </div>
 
@@ -140,7 +140,10 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div class="figure">
-          <img class="Sirv image-main" src="static/img/teaser.png" data-src="static/img/teaser.png">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/teaser0.mp4" type="video/mp4">
+          </video>
+          <!-- <img class="Sirv image-main" src="static/img/teaser.png" data-src="static/img/teaser.png"> -->
           <img class="Sirv image-hover" data-src="static/img/teaser_hover3.png">
         </div>
 
@@ -229,6 +232,12 @@
     </div>
   </section> -->
 
+  <!-- #1  -->
+  <!-- #1  -->
+  <!-- #1  -->
+  <!-- #1  -->
+  <!-- #1  -->
+  <!-- #1  -->
   <!-- / Paper video.   -->
   <br /><br />
   <h3 class="title is-4 has-text-centered">Demo of Different Attribtues</h3>
@@ -284,15 +293,232 @@
       <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
     <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot " onclick="currentSlide(1)"></span>
+      <span class="dot " onclick="currentSlide(2)"></span>
+      <span class="dot " onclick="currentSlide(3)"></span>
     </div>
   </div>
   <script>
-    // https://stackoverflow.com/questions/47368940/css-slideshow-not-showing-image-until-clicked
     let slideIndex = 1;
     showSlides(slideIndex);
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+      // https://stackoverflow.com/questions/47368940/css-slideshow-not-showing-image-until-clicked
+
+  </script>
+
+
+
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- / Paper video.   -->
+  <br /><br />
+  <h3 class="title is-4 has-text-centered">Demo of Different Emotions</h3>
+  <div class="content has-text-justified">
+    <div class="slideshow-container">
+
+
+      <div class="mySlides2 fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_eyegalsses.mp4" type="video/mp4">
+          </video>
+          <!-- <iframe src="https://www.youtube.com/embed/g3nmM6MdxwY?autoplay=1"
+            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
+        </div>
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_5_9_clothingtype.mp4" type="video/mp4"></video>  -->
+        <br>
+        <div class="text">[1 / 3] Appearance Attributes: Eyeglasses </div>
+        <!-- <div class="numbertext">1 / 3</div> -->
+      </div>
+
+      <div class="mySlides2 fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_laugh.mp4" type="video/mp4">
+          </video>
+
+          <!-- <image src="static/img/demo.gif" width="100%" class="img-responsive" alt="overview"> -->
+          <!-- <iframe src="https://www.youtube.com/embed/p2uwqh_SFL8?autoplay=1"
+            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
+        </div>
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_10_17_clothingcolor.mp4" type="video/mp4"></video> -->
+        <!-- <div class="numbertext">3 / 3</div> -->
+        <br>
+        <div class="text">[2 / 3] Action Attributes: Laugh </div>
+      </div>
+
+      <div class="mySlides2 fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_sad.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_0_3_pose.mp4" type="video/mp4"></video> -->
+        <!-- <div class="numbertext">1 / 3</div> -->
+        <br>
+        <div class="text">[3 / 3] Emotion Attributes: Sad </div>
+      </div>
+      <a class="prev" onclick="plusSlides2(-1)">❮</a>
+      <a class="next" onclick="plusSlides2(1)">❯</a>
+    </div>
+    <div style="text-align:center">
+      <span class="dot2 dot" onclick="currentSlide2(1)"></span>
+      <span class="dot2 dot" onclick="currentSlide2(2)"></span>
+      <span class="dot2 dot" onclick="currentSlide2(3)"></span>
+    </div>
+  </div>
+  <script>
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+  function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+  }
+
+  function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+  }
+
+  function showSlides2(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides2");
+    let dots = document.getElementsByClassName("dot2");
+    if (n > slides.length) {slideIndex2 = 1}    
+    if (n < 1) {slideIndex2 = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex2-1].style.display = "block";  
+    dots[slideIndex2-1].className += " active";
+  }    // https://stackoverflow.com/questions/47368940/css-slideshow-not-showing-image-until-clicked
+
+  </script>
+
+
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- #3  -->
+  <!-- / Paper video.   -->
+  <br /><br />
+  <h3 class="title is-4 has-text-centered">Demo of Different Emotions</h3>
+  <div class="content has-text-justified">
+    <div class="slideshow-container">
+
+
+      <div class="mySlides3 fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_eyegalsses.mp4" type="video/mp4">
+          </video>
+          <!-- <iframe src="https://www.youtube.com/embed/g3nmM6MdxwY?autoplay=1"
+            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
+        </div>
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_5_9_clothingtype.mp4" type="video/mp4"></video>  -->
+        <br>
+        <div class="text">[1 / 3] Appearance Attributes: Eyeglasses </div>
+        <!-- <div class="numbertext">1 / 3</div> -->
+      </div>
+
+      <div class="mySlides3 fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_laugh.mp4" type="video/mp4">
+          </video>
+
+          <!-- <image src="static/img/demo.gif" width="100%" class="img-responsive" alt="overview"> -->
+          <!-- <iframe src="https://www.youtube.com/embed/p2uwqh_SFL8?autoplay=1"
+            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
+        </div>
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_10_17_clothingcolor.mp4" type="video/mp4"></video> -->
+        <!-- <div class="numbertext">3 / 3</div> -->
+        <br>
+        <div class="text">[2 / 3] Action Attributes: Laugh </div>
+      </div>
+
+      <div class="mySlides3 fade">
+        <div class="publication-video">
+          <video id="replay-video" controls muted preload autoplay loop width="100%">
+            <source src="./static/video/test_sad.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
+            <source src="./static/videos/10x1-style-mixing_0_3_pose.mp4" type="video/mp4"></video> -->
+        <!-- <div class="numbertext">1 / 3</div> -->
+        <br>
+        <div class="text">[3 / 3] Emotion Attributes: Sad </div>
+      </div>
+      <a class="prev" onclick="plusSlides3(-1)">❮</a>
+      <a class="next" onclick="plusSlides3(1)">❯</a>
+    </div>
+    <div style="text-align:center">
+      <span class="dot3 dot" onclick="currentSlide3(1)"></span>
+      <span class="dot3 dot" onclick="currentSlide3(2)"></span>
+      <span class="dot3 dot" onclick="currentSlide3(3)"></span>
+    </div>
+  </div>
+  <script>
+    let slideIndex3 = 1;
+    showSlides3(slideIndex3);
+  function plusSlides3(n) {
+    showSlides3(slideIndex3 += n);
+  }
+
+  function currentSlide3(n) {
+    showSlides3(slideIndex3 = n);
+  }
+
+  function showSlides3(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides3");
+    let dots = document.getElementsByClassName("dot3");
+    if (n > slides.length) {slideIndex3 = 1}    
+    if (n < 1) {slideIndex3 = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex3-1].style.display = "block";  
+    dots[slideIndex3-1].className += " active";
+  }    // https://stackoverflow.com/questions/47368940/css-slideshow-not-showing-image-until-clicked
+
   </script>
 
   <section class="section">
@@ -382,8 +608,8 @@
       <p>If you find this helpful, please cite our work: </p>
       <pre><code>@article{celebvhq,
       title={CelebV-HQ: A Large-scale Video Facial Attributes Dataset},
-      author={Zhu, Hao and Zhu, Wentao and Jiang, Liming and Tang, Siwei and 
-        Zhang, Li and Liu, Ziwei and Loy, Chen Change and Wu, Wayne},
+      author={Zhu, Hao and Wu, Wayne and Zhu, Wentao and Jiang, Liming and Tang, Siwei and 
+        Zhang, Li and Liu, Ziwei and Loy, Chen Change},
       journal={arxiv}
     }</code></pre>
     </div>
