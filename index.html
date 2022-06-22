@@ -99,15 +99,6 @@
                     <span>Supplement</span>
                   </a>
                 </span> -->
-                <!-- Video Link. -->
-                <span class="link-block">
-                  <a href="https://youtu.be/8eNUwi34Xp8" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Demo Video</span>
-                  </a>
-                </span>
                 <!-- Code Link. -->
                 <span class="link-block">
                   <a href="https://github.com/CelebV-HQ/CelebV-HQ" class="external-link button is-normal is-rounded is-dark">
@@ -115,6 +106,15 @@
                       <i class="fab fa-github"></i>
                     </span>
                     <span>GitHub</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/8eNUwi34Xp8" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Demo Video</span>
                   </a>
                 </span>
                 <!-- Dataset Link. -->
@@ -133,7 +133,6 @@
       </div>
     </div>
   </section>
-
   <br>
   <!-- Teaser Picture -->
   <section class="hero teaser">
@@ -180,7 +179,7 @@
                 challenges it would bring to related research directions. -->
             </p>
             <p>For more details of the dataset, please refer to the paper "<a href="#">CelebV-HQ: A Large-scale
-                Video Facial Attributes Dataset</a>".
+                Video Facial Attributes Dataset (Coming soon)</a>".
             </p>
           </div>
         </div>
@@ -189,6 +188,22 @@
   <!--/ Abstract. -->
 
 
+  <!-- Paper video. -->
+  <section>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <h2 class="title is-3">Overview Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/8eNUwi34Xp8?autoplay=0&start=11" frameborder="10"
+            allow="autoplay; encrypted-media" width="50%" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- / Paper video.   -->
+
+<!-- 
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -199,7 +214,8 @@
               <source src="./static/video/demo.mp4" type="video/mp4">
             </video>
           </div>
-  </section>
+  </section> -->
+  <hr/>
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -216,7 +232,7 @@
 
   </section>
 
-
+  <hr/>
   <!-- Paper video. -->
   <!-- <section>
     <div class="columns is-centered has-text-centered">
@@ -240,7 +256,7 @@
   <!-- #1  -->
   <!-- / Paper video.   -->
   <br /><br />
-  <h3 class="title is-4 has-text-centered">Demo of Different Attribtues</h3>
+  <h3 class="title is-4 has-text-centered">Demos of Appearance</h3>
   <div class="content has-text-justified">
     <div class="slideshow-container">
 
@@ -248,7 +264,7 @@
       <div class="mySlides fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_eyegalsses.mp4" type="video/mp4">
+            <source src="./static/video/appearance_eyegalsses.mp4" type="video/mp4">
           </video>
           <!-- <iframe src="https://www.youtube.com/embed/g3nmM6MdxwY?autoplay=1"
             frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
@@ -256,14 +272,14 @@
         <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
             <source src="./static/videos/10x1-style-mixing_5_9_clothingtype.mp4" type="video/mp4"></video>  -->
         <br>
-        <div class="text">[1 / 3] Appearance Attributes: Eyeglasses </div>
+        <div class="text">[1 / 3] Appearance: Eyeglasses </div>
         <!-- <div class="numbertext">1 / 3</div> -->
       </div>
 
       <div class="mySlides fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_laugh.mp4" type="video/mp4">
+            <source src="./static/video/appearance_bald.mp4" type="video/mp4">
           </video>
 
           <!-- <image src="static/img/demo.gif" width="100%" class="img-responsive" alt="overview"> -->
@@ -274,20 +290,20 @@
             <source src="./static/videos/10x1-style-mixing_10_17_clothingcolor.mp4" type="video/mp4"></video> -->
         <!-- <div class="numbertext">3 / 3</div> -->
         <br>
-        <div class="text">[2 / 3] Action Attributes: Laugh </div>
+        <div class="text">[2 / 3] Appearance: Bald </div>
       </div>
 
       <div class="mySlides fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_sad.mp4" type="video/mp4">
+            <source src="./static/video/appearance_wearingmask.mp4" type="video/mp4">
           </video>
         </div>
         <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
             <source src="./static/videos/10x1-style-mixing_0_3_pose.mp4" type="video/mp4"></video> -->
         <!-- <div class="numbertext">1 / 3</div> -->
         <br>
-        <div class="text">[3 / 3] Emotion Attributes: Sad </div>
+        <div class="text">[3 / 3]  Appearance: Wearing Masks </div>
       </div>
       <a class="prev" onclick="plusSlides(-1)">❮</a>
       <a class="next" onclick="plusSlides(1)">❯</a>
@@ -330,15 +346,14 @@ function plusSlides(n) {
 
 
 
-  <!-- #3  -->
-  <!-- #3  -->
-  <!-- #3  -->
-  <!-- #3  -->
-  <!-- #3  -->
-  <!-- #3  -->
-  <!-- / Paper video.   -->
+  <!-- #2  -->
+  <!-- #2  -->
+  <!-- #2  -->
+  <!-- #2  -->
+  <!-- #2  -->
+  <!-- #2  -->
   <br /><br />
-  <h3 class="title is-4 has-text-centered">Demo of Different Emotions</h3>
+  <h3 class="title is-4 has-text-centered">Demos of Action</h3>
   <div class="content has-text-justified">
     <div class="slideshow-container">
 
@@ -346,7 +361,7 @@ function plusSlides(n) {
       <div class="mySlides2 fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_eyegalsses.mp4" type="video/mp4">
+            <source src="./static/video/action_laugh.mp4" type="video/mp4">
           </video>
           <!-- <iframe src="https://www.youtube.com/embed/g3nmM6MdxwY?autoplay=1"
             frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
@@ -354,14 +369,14 @@ function plusSlides(n) {
         <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
             <source src="./static/videos/10x1-style-mixing_5_9_clothingtype.mp4" type="video/mp4"></video>  -->
         <br>
-        <div class="text">[1 / 3] Appearance Attributes: Eyeglasses </div>
+        <div class="text">[1 / 3] Action: Laugh </div>
         <!-- <div class="numbertext">1 / 3</div> -->
       </div>
 
       <div class="mySlides2 fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_laugh.mp4" type="video/mp4">
+            <source src="./static/video/action_close_eyes.mp4" type="video/mp4">
           </video>
 
           <!-- <image src="static/img/demo.gif" width="100%" class="img-responsive" alt="overview"> -->
@@ -372,20 +387,20 @@ function plusSlides(n) {
             <source src="./static/videos/10x1-style-mixing_10_17_clothingcolor.mp4" type="video/mp4"></video> -->
         <!-- <div class="numbertext">3 / 3</div> -->
         <br>
-        <div class="text">[2 / 3] Action Attributes: Laugh </div>
+        <div class="text">[2 / 3] Action: Close Eyes </div>
       </div>
 
       <div class="mySlides2 fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_sad.mp4" type="video/mp4">
+            <source src="./static/video/action_talk.mp4" type="video/mp4">
           </video>
         </div>
         <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
             <source src="./static/videos/10x1-style-mixing_0_3_pose.mp4" type="video/mp4"></video> -->
         <!-- <div class="numbertext">1 / 3</div> -->
         <br>
-        <div class="text">[3 / 3] Emotion Attributes: Sad </div>
+        <div class="text">[3 / 3] Action: Talking </div>
       </div>
       <a class="prev" onclick="plusSlides2(-1)">❮</a>
       <a class="next" onclick="plusSlides2(1)">❯</a>
@@ -432,9 +447,8 @@ function plusSlides(n) {
   <!-- #3  -->
   <!-- #3  -->
   <!-- #3  -->
-  <!-- / Paper video.   -->
   <br /><br />
-  <h3 class="title is-4 has-text-centered">Demo of Different Emotions</h3>
+  <h3 class="title is-4 has-text-centered">Demos of Emotion</h3>
   <div class="content has-text-justified">
     <div class="slideshow-container">
 
@@ -442,7 +456,7 @@ function plusSlides(n) {
       <div class="mySlides3 fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_eyegalsses.mp4" type="video/mp4">
+            <source src="./static/video/emotion_sad.mp4" type="video/mp4">
           </video>
           <!-- <iframe src="https://www.youtube.com/embed/g3nmM6MdxwY?autoplay=1"
             frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
@@ -450,39 +464,30 @@ function plusSlides(n) {
         <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
             <source src="./static/videos/10x1-style-mixing_5_9_clothingtype.mp4" type="video/mp4"></video>  -->
         <br>
-        <div class="text">[1 / 3] Appearance Attributes: Eyeglasses </div>
+        <div class="text">[1 / 3] Emotion: Sad </div>
         <!-- <div class="numbertext">1 / 3</div> -->
       </div>
 
       <div class="mySlides3 fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_laugh.mp4" type="video/mp4">
+            <source src="./static/video/emotion_angey.mp4" type="video/mp4">
           </video>
-
-          <!-- <image src="static/img/demo.gif" width="100%" class="img-responsive" alt="overview"> -->
-          <!-- <iframe src="https://www.youtube.com/embed/p2uwqh_SFL8?autoplay=1"
-            frameborder="0" allow="autoplay; encrypted-media" width="100%" height="80%"></iframe> -->
         </div>
-        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
-            <source src="./static/videos/10x1-style-mixing_10_17_clothingcolor.mp4" type="video/mp4"></video> -->
-        <!-- <div class="numbertext">3 / 3</div> -->
         <br>
-        <div class="text">[2 / 3] Action Attributes: Laugh </div>
+        <div class="text">[2 / 3] Emotion: Anger </div>
       </div>
 
       <div class="mySlides3 fade">
         <div class="publication-video">
           <video id="replay-video" controls muted preload autoplay loop width="100%">
-            <source src="./static/video/test_sad.mp4" type="video/mp4">
+            <source src="./static/video/emotion_happy.mp4" type="video/mp4">
           </video>
         </div>
-        <!-- <video id="replay-video" controls muted preload autoplay loop width="155%">
-            <source src="./static/videos/10x1-style-mixing_0_3_pose.mp4" type="video/mp4"></video> -->
-        <!-- <div class="numbertext">1 / 3</div> -->
         <br>
-        <div class="text">[3 / 3] Emotion Attributes: Sad </div>
+        <div class="text">[3 / 3] Emotion: Happy </div>
       </div>
+      
       <a class="prev" onclick="plusSlides3(-1)">❮</a>
       <a class="next" onclick="plusSlides3(1)">❯</a>
     </div>
@@ -520,6 +525,7 @@ function plusSlides(n) {
   }    // https://stackoverflow.com/questions/47368940/css-slideshow-not-showing-image-until-clicked
 
   </script>
+  <hr/>
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -579,8 +585,8 @@ function plusSlides(n) {
               <li>
                 <figure>
                   <a href="https://www.github.com/CelebV-HQ/celebv_hq_download/">
-                    <img src="static/img/download_icon.jpeg" height="120px" width="140px" alt="download">
-                    <figcaption> 1. Download Tool </figcaption>
+                    <img src="static/img/download_icon.jpeg" height="80px" width="100px" alt="download">
+                    <figcaption> Download Tool </figcaption>
                   </a>
                 </figure>
               </li>
@@ -588,6 +594,7 @@ function plusSlides(n) {
             </ul>
   </section>
 
+  <hr/>
 
 
   <section class="section">
@@ -601,6 +608,7 @@ function plusSlides(n) {
               the download tool development.</p>
 
   </section>
+  <hr/>
 
   <section class="section" id="Citaton">
     <div class="container is-max-desktop content">

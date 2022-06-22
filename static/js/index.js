@@ -73,31 +73,31 @@ function magnify(imgID, zoom) {
 
 
 
-var INTERP_BASE = "./static/images/interpolate/seed"//"https:/xxx/interpolation/stacked";
-var NUM_INTERP_FRAMES = 98;
+// var INTERP_BASE = "./static/images/interpolate/seed"//"https:/xxx/interpolation/stacked";
+// var NUM_INTERP_FRAMES = 98;
 // var INTERP_BASE = "https://homes.cs.washington.edu/~kpar/nerfies/interpolation/stacked";
 
 
-var interp_images = [];
-function preloadInterpolationImages() {
-  for (var i = 1; i < NUM_INTERP_FRAMES; i++) {
-    if (i == 35 || i == 43)
-      i++;
-    else{
-      var path = INTERP_BASE + String(i).padStart(4, '0') + '.png';
-    // var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
-      interp_images[i] = new Image();
-      interp_images[i].src = path;
-    }
-  }
-}
+// var interp_images = [];
+// function preloadInterpolationImages() {
+//   for (var i = 1; i < NUM_INTERP_FRAMES; i++) {
+//     if (i == 35 || i == 43)
+//       i++;
+//     else{
+//       var path = INTERP_BASE + String(i).padStart(4, '0') + '.png';
+//     // var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
+//       interp_images[i] = new Image();
+//       interp_images[i].src = path;
+//     }
+//   }
+// }
 
-function setInterpolationImage(i) {
-  var image = interp_images[i];
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
-}
+// function setInterpolationImage(i) {
+//   var image = interp_images[i];
+//   image.ondragstart = function() { return false; };
+//   image.oncontextmenu = function() { return false; };
+//   $('#interpolation-image-wrapper').empty().append(image);
+// }
 
 
 $(document).ready(function() {
