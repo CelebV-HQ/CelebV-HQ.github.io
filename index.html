@@ -521,26 +521,76 @@ function plusSlides(n) {
   </section>
 
 
+
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3 "> Agreement</h2>
+          <h2 class="title is-3 "> Benchmark</h2>
+          <h3 class="is-4 title"> Unconditional Video Generation</h3>
+          
           <div class="content has-text-justified">
+            <p>We construct a benchmark of unconditional video generation task, for four currently prevalent models (VideoGPT, MoCoGAN-HD, DIGAN, and StyleGAN-V) on 4 face video datasets (FaceForensics, Vox, MEAD and CelebV-HQ). 
+                <br/>
+                Firstly, it can be observed that the ranking achieved by CelebV-HQ is similar to other prevalent datasets within different methods, which indicates the effectiveness of CelebV-HQ. 
+            In addition, the current video generation models obtained good FVD/FID metrics compared to the Vox dataset with similar data size. This illustrates that CelebV-HQ further exploits the potential of the current work, allowing it to generate more diverse and higher quality results.
+            <br/>
+            CelebV-HQ as a challenging real-world dataset, still has room for community to make improvement. 
+              </p>
+              <figure>
 
-            <ul>
-              <li>The CelebV-HQ dataset is available for non-commercial research purposes only. </li>
-              <li>All videos of the CelebV-HQ dataset are obtained from the Internet which are not property of
-                SenseTime Research. The SenseTime Research is not responsible for the content nor the meaning
-                of these videos. </li>
-              <li>You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any
-                commercial purposes, any portion of the videos and any portion of derived data.</li>
-              <li>You agree not to further copy, publish or distribute any portion of the CelebV-HQ
-                dataset. Except, for internal use at a single site within the same organization it is allowed to
-                make copies of the dataset.</li>
-            </ul>
+            <image src="static/img/benchmark.png" class="img-responsive" alt="overview">
+                <figcaption>Table: FVD/FID Metrics Comparsions</figcaption>
+            </figure>
+            </div>
+            
+                <video id="replay-video" controls muted preload autoplay loop width="100%">
+                  <source src="./static/video/demo_videogpt.mp4" type="video/mp4">
+               </video>
+               <h3 class="is-4 title"> VideoGPT</h3>
+               <br/>
+              
+                <video id="replay-video" controls muted preload autoplay loop width="100%">
+                  <source src="./static/video/demo_mocoganhd.mp4" type="video/mp4">
+                </video>
+                <h3 class="is-4 title is-centered "> MoCoGAN-HD</h3>
+                <br/>
 
-  </section>
+                  <video id="replay-video" controls muted preload autoplay loop width="100%">
+                    <source src="./static/video/demo_digan.mp4" type="video/mp4">
+                  </video>
+                  <h3 class="is-4 title"> DIGAN</h3>
+                  <br/>
+                    <video id="replay-video" controls muted preload autoplay loop width="100%">
+                      <source src="./static/video/demo_styleganv.mp4" type="video/mp4">
+                    </video>
+                    <h3 class="is-4 title"> StyleGAN-V</h3>
+
+                </section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 "> Agreement</h2>
+        <div class="content has-text-justified">
+
+          <ul>
+            <li>The CelebV-HQ dataset is available for non-commercial research purposes only. </li>
+            <li>All videos of the CelebV-HQ dataset are obtained from the Internet which are not property of
+              SenseTime Research. The SenseTime Research is not responsible for the content nor the meaning
+              of these videos. </li>
+            <li>You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any
+              commercial purposes, any portion of the videos and any portion of derived data.</li>
+            <li>You agree not to further copy, publish or distribute any portion of the CelebV-HQ
+              dataset. Except, for internal use at a single site within the same organization it is allowed to
+              make copies of the dataset.</li>
+          </ul>
+
+</section>
 
 
 
@@ -551,19 +601,14 @@ function plusSlides(n) {
         <div class="column is-four-fifths">
           <h2 class="title is-3 "> Download</h2>
           <div class="content has-text-justified">
-            <p class="text-justify">We provide a <a href="https://github.com/CelebV-HQ/celebv_hq_download">download
-                tool</a> that
-              automatically fetches and
-              processes videos from <a href="https://www.youtube.com">YouTube</a>. We highly recommend using this
-              tool to
-              acquire the dataset. In addition, as some links may no longer be available, we host the full version
-              of CelebV-HQ.
-              Please contact us if needed.</p>
+            <p class="text-justify">We provide a download tool that automatically fetches and processes videos from <a href="https://www.youtube.com">YouTube</a>. 
+              We highly recommend using this tool to acquire the dataset. 
+              In addition, as some links may no longer be available, we host the full version of CelebV-HQ. Please contact us if needed.</p>
 
             <ul id="pic_list">
               <li>
                 <figure>
-                  <a href="https://www.github.com/CelebV-HQ/celebv_hq_download/">
+                  <a href="https://www.github.com/CelebV-HQ/CelebV-HQ/">
                     <img src="static/img/download_icon.jpeg" height="80px" width="100px" alt="download">
                     <figcaption> Download Tool </figcaption>
                   </a>
