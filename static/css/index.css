@@ -1,3 +1,6 @@
+.pending {
+  filter: grayscale(90%);
+}
 body {
   font-family: 'Noto Sans', sans-serif;
 }
